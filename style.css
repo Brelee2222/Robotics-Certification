@@ -4,4 +4,10 @@ body {
 
  #textThing {
      color : gray;
+     font-family: Arial;
  }
+
+ .flex {
+    display: flexbox;
+    background-color: aqua;
+}

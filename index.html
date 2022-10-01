@@ -1,39 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lmao</title>
-        <link ref="icon" src=""></link>
-        <style>
-            body {
-                background-color: magenta; 
-            }
-
-            #textThing {
-                color : gray;
-                font-family: Arial;
-            }
-
-            .flex {
-                display: flexbox;
-                background-color: aqua;
-            }
-        </style>
+        <link rel="icon" href="">
+        <link rel="stylesheet" href="style.css">
+        <link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+        <title>Trimet Bus Lines</title>
     </head>
     <body>
         <header>
-            <p id="textThing">click me!</p>
+            <marquee class="titleHeader" loop="1">Trimet</marquee>
         </header>
-        <div class="flex"><a href="https://github.com/Brelee2222">shameless self promotion <img src="assets/CatPfpFlower.jpg"></a></div>
+        <div class="stops" id="vehicleStops"></div>
     </body>
-    <script>
-        const button = document.getElementById("textThing");
-        button.onclick = function() {
-            alert("hilo wurld");
-            let text = button.appendChild(document.createElement("a"));
-            getData().then(res => res.json().then(json => button.innerText = `I have a server named ${json.name}`));
-        }
-        async function getData(){
-            return (await fetch("https://discord.com/api/guilds/807113739119755264/widget.json"));
-        }
-    </script>
+    <script src="script.js"></script>
 </html>

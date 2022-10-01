@@ -1,13 +1,66 @@
-body {
-    background-color: magenta; 
- }
-
- #textThing {
-     color : gray;
-     font-family: Arial;
- }
-
- .flex {
-    display: flexbox;
-    background-color: aqua;
+.vehicle {
+    border : 10px solid;
+    padding: 0.00000000000000000000000000000000000000000000000000000000000000000000000000001px;
+    margin : 10px;
+    display: flex;
+/*colon line: 100%*/
 }
+body {
+    background-color: whitesmoke;
+}
+
+.stops {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.titleHeader {
+    font-family: Arial;
+}
+
+.busLineContainer {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+}
+
+#arrivalInfo {
+    text-align: left;
+}
+
+#arrivalHeader {
+    font-family: Arial;
+    color: #ee0000;
+    font-family: roboto;
+}
+
+#busInfo {
+    text-align: left;
+    overflow-wrap: break-word;
+    width:100px;
+    margin: 10px;
+}
+
+#busHeader {
+    margin: 5px;
+    text-align: center;
+    color: #00aaaa;
+    font-family: roboto;
+}
+
+#busNumber {
+    margin: 5px;
+    font-size: 300%;
+    text-align: center;
+    color: #00aaaa;
+    font-weight: bold;
+    font-family: roboto;
+}
+
+#busName {
+    margin: 5px;
+    text-align: center;
+    color: #00aaaa;
+    font-family: roboto;
+}
+

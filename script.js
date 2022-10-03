@@ -62,10 +62,15 @@ function updateLocations(arrivals, locs) {
         let time = arrival[arrival.status] - arrivals.resultSet.queryTime;
         if(time <= 0)
             continue;
-        console.log(busLine.querySelector("#busNumber").innerText = arrival.locid);
-        console.log(busLine.querySelector("#busName").innerText = locations[arrival.locid].desc);
-        busLine.querySelector("#arrivalTime").innerText = ((time)/6000).toFixed() + "m";
-        vehiclesElement.appendChild(busLine.cloneNode(true));
+        //I'm lazy
+        let busLineTemp = vehiclesElement.querySelector("#a" + arrival.locid);
+        if(!busLineTemp) {
+            busLine.id = "a" + arrival.locid;
+            console.log(busLine.querySelector("#busNumber").innerText = arrival.locid);
+            console.log(busLine.querySelector("#busName").innerText = locations[arrival.locid].desc);
+            busLineTemp = vehiclesElement.appendChild(busLine.cloneNode(true));
+        }   
+        busLineTemp.querySelector("#arrivalTime").innerText += " " + ((time)/6000).toFixed() + "m";
     }
 }
 

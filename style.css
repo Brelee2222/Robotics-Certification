@@ -34,6 +34,13 @@ body {
     font-family: roboto;
 }
 
+#arrivalTime {
+    color: #FFA500;
+    font-size: 400%;
+    font-family: roboto;
+    margin: 5px;
+}
+
 #busInfo {
     text-align: left;
     overflow-wrap: break-word;

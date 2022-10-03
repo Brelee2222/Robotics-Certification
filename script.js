@@ -23,6 +23,8 @@ function init() {
     const arrivalHeader = arrivalInfo.appendChild(document.createElement("p"));
     arrivalHeader.innerText = "arrival times";
     arrivalHeader.id = "arrivalHeader";
+    const arrivalTimes = arrivalInfo.appendChild(document.createElement("p"));
+    arrivalTimes.id = "arrivalTime";
 }
 
 async function fetchTrimetData() {
@@ -57,8 +59,12 @@ function updateLocations(arrivals, locs) {
     for(let arrival of arrivals.resultSet.arrival) {
         if(!locations[arrival.locid])
             continue;
+        let time = arrival[arrival.status] - arrivals.resultSet.queryTime;
+        if(time <= 0)
+            continue;
         console.log(busLine.querySelector("#busNumber").innerText = arrival.locid);
         console.log(busLine.querySelector("#busName").innerText = locations[arrival.locid].desc);
+        busLine.querySelector("#arrivalTime").innerText = ((time)/6000).toFixed() + "m";
         vehiclesElement.appendChild(busLine.cloneNode(true));
     }
 }
